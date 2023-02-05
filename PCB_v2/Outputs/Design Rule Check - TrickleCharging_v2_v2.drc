@@ -1,97 +1,107 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc
-Date     : 04/02/2023
-Time     : 21:28:49
+Date     : 05/02/2023
+Time     : 15:41:51
 
-Processing Rule : Unpoured Polygon (Allow unpoured: False)
-Rule Violations :0
+Processing Rule : Clearance Constraint (Gap=0.254mm) (All),(All)
+   Violation between Pad J21-(7mm,12.64mm)  Multi-Layer and 
+                     Pad J21-A1/B12(8.075mm,12.95mm)  Top Layer
+   Violation between Pad J21-(7mm,12.64mm)  Multi-Layer and 
+                     Pad J21-A4/B9(8.075mm,12.15mm)  Top Layer
+   Violation between Pad J21-(7mm,6.86mm)  Multi-Layer and 
+                     Pad J21-B4/A9(8.075mm,7.35mm)  Top Layer
+   Violation between Pad J21-(7mm,6.86mm)  Multi-Layer and 
+                     Pad J21-B1/A12(8.075mm,6.55mm)  Top Layer
+Rule Violations :4
 
-Processing Rule : Silk primitive without silk layer
-Rule Violations :0
-
-Processing Rule : Silk to Silk (Clearance=0.254mm) (Disabled)(All),(All)
-Rule Violations :0
-
-Processing Rule : Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)
-   Violation between Pad D1-1(10mm,14.15mm)  Top Layer and 
-                     Arc (9.23mm,13.53mm)  Top Overlay
-   Violation between Track (9.25mm,3.4mm)(9.25mm,5.6mm)  Top Overlay and 
-                     Pad LD2-1(10.25mm,4.5mm)  Top Layer
-   Violation between Track (9.25mm,3.4mm)(11.05mm,3.4mm)  Top Overlay and 
-                     Pad LD2-1(10.25mm,4.5mm)  Top Layer
-   Violation between Track (9.25mm,5.6mm)(11.05mm,5.6mm)  Top Overlay and 
-                     Pad LD2-1(10.25mm,4.5mm)  Top Layer
-   Violation between Track (14.2mm,5.6mm)(14.45mm,5.6mm)  Top Overlay and 
-                     Pad LD2-2(13.25mm,4.5mm)  Top Layer
-   Violation between Track (14.25mm,3.4mm)(14.25mm,5.6mm)  Top Overlay and 
-                     Pad LD2-2(13.25mm,4.5mm)  Top Layer
-   Violation between Track (14.35mm,3.4mm)(14.35mm,5.6mm)  Top Overlay and 
-                     Pad LD2-2(13.25mm,4.5mm)  Top Layer
-   Violation between Track (14.2mm,3.4mm)(14.2mm,5.6mm)  Top Overlay and 
-                     Pad LD2-2(13.25mm,4.5mm)  Top Layer
-   Violation between Track (12.45mm,3.4mm)(14.35mm,3.4mm)  Top Overlay and 
-                     Pad LD2-2(13.25mm,4.5mm)  Top Layer
-   Violation between Track (12.45mm,5.6mm)(14.35mm,5.6mm)  Top Overlay and 
-                     Pad LD2-2(13.25mm,4.5mm)  Top Layer
-   Violation between Track (9.3mm,14.45mm)(9.3mm,16.05mm)  Top Overlay and 
-                     Pad D1-1(10mm,14.15mm)  Top Layer
-   Violation between Track (12.7mm,14.45mm)(12.7mm,16.05mm)  Top Overlay and 
-                     Pad D1-2(12mm,14.15mm)  Top Layer
-   Violation between Track (13.15mm,16.45mm)(13.15mm,18.25mm)  Top Overlay and 
-                     Pad LD1-1(14.25mm,17.25mm)  Top Layer
-   Violation between Track (15.35mm,16.45mm)(15.35mm,18.25mm)  Top Overlay and 
-                     Pad LD1-1(14.25mm,17.25mm)  Top Layer
-   Violation between Track (13.15mm,18.25mm)(15.35mm,18.25mm)  Top Overlay and 
-                     Pad LD1-1(14.25mm,17.25mm)  Top Layer
-   Violation between Track (13.15mm,13.15mm)(13.15mm,15.05mm)  Top Overlay and 
-                     Pad LD1-2(14.25mm,14.25mm)  Top Layer
-   Violation between Track (15.35mm,13.15mm)(15.35mm,15.05mm)  Top Overlay and 
-                     Pad LD1-2(14.25mm,14.25mm)  Top Layer
-   Violation between Track (15.35mm,13.05mm)(15.35mm,13.3mm)  Top Overlay and 
-                     Pad LD1-2(14.25mm,14.25mm)  Top Layer
-   Violation between Track (13.15mm,13.25mm)(15.35mm,13.25mm)  Top Overlay and 
-                     Pad LD1-2(14.25mm,14.25mm)  Top Layer
-   Violation between Track (13.15mm,13.15mm)(15.35mm,13.15mm)  Top Overlay and 
-                     Pad LD1-2(14.25mm,14.25mm)  Top Layer
-   Violation between Track (13.15mm,13.3mm)(15.35mm,13.3mm)  Top Overlay and 
-                     Pad LD1-2(14.25mm,14.25mm)  Top Layer
-Rule Violations :21
-
-Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
-Rule Violations :0
-
-Processing Rule : Hole To Hole Clearance (Gap=0.5mm) (All),(All)
-Rule Violations :0
-
-Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
-Rule Violations :0
-
-Processing Rule : Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)
-Rule Violations :0
-
-Processing Rule : Un-Routed Net Constraint ( (All) )
-Rule Violations :0
-
-Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Processing Rule : Width Constraint (Min=0.127mm) (Max=3mm) (Preferred=0.254mm) (All)
 Rule Violations :0
 
 Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=0.127mm) (Max=3mm) (Preferred=0.254mm) (All)
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
 
-Processing Rule : Clearance Constraint (Gap=0.254mm) (All),(All)
-   Violation between Pad J1-(7mm,6.86mm)  Multi-Layer and 
-                     Pad J1-B1/A12(8.075mm,6.55mm)  Top Layer
-   Violation between Pad J1-(7mm,6.86mm)  Multi-Layer and 
-                     Pad J1-B4/A9(8.075mm,7.35mm)  Top Layer
-   Violation between Pad J1-(7mm,12.64mm)  Multi-Layer and 
-                     Pad J1-A4/B9(8.075mm,12.15mm)  Top Layer
-   Violation between Pad J1-(7mm,12.64mm)  Multi-Layer and 
-                     Pad J1-A1/B12(8.075mm,12.95mm)  Top Layer
-Rule Violations :4
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.5mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)
+   Violation between Pad D21-1(10mm,14.15mm)  Top Layer and 
+                     Arc (9.23mm,13.53mm)  Top Overlay
+   Violation between Track (13.15mm,13.15mm)(13.15mm,15.05mm)  Top Overlay and 
+                     Pad LD21-2(14.25mm,14.25mm)  Top Layer
+   Violation between Track (15.35mm,13.05mm)(15.35mm,13.3mm)  Top Overlay and 
+                     Pad LD21-2(14.25mm,14.25mm)  Top Layer
+   Violation between Track (15.35mm,13.15mm)(15.35mm,15.05mm)  Top Overlay and 
+                     Pad LD21-2(14.25mm,14.25mm)  Top Layer
+   Violation between Track (13.15mm,13.3mm)(15.35mm,13.3mm)  Top Overlay and 
+                     Pad LD21-2(14.25mm,14.25mm)  Top Layer
+   Violation between Track (13.15mm,13.15mm)(15.35mm,13.15mm)  Top Overlay and 
+                     Pad LD21-2(14.25mm,14.25mm)  Top Layer
+   Violation between Track (13.15mm,13.25mm)(15.35mm,13.25mm)  Top Overlay and 
+                     Pad LD21-2(14.25mm,14.25mm)  Top Layer
+   Violation between Track (13.15mm,16.45mm)(13.15mm,18.25mm)  Top Overlay and 
+                     Pad LD21-1(14.25mm,17.25mm)  Top Layer
+   Violation between Track (15.35mm,16.45mm)(15.35mm,18.25mm)  Top Overlay and 
+                     Pad LD21-1(14.25mm,17.25mm)  Top Layer
+   Violation between Track (13.15mm,18.25mm)(15.35mm,18.25mm)  Top Overlay and 
+                     Pad LD21-1(14.25mm,17.25mm)  Top Layer
+   Violation between Text "R21" (4mm,1.75mm)  Top Overlay and 
+                     Pad R21-2(6.045mm,2mm)  Top Layer
+   Violation between Text "R20" (3.5mm,17mm)  Top Overlay and 
+                     Pad R20-2(6.045mm,17.5mm)  Top Layer
+   Violation between Track (12.7mm,14.45mm)(12.7mm,16.05mm)  Top Overlay and 
+                     Pad D21-2(12mm,14.15mm)  Top Layer
+   Violation between Track (9.3mm,14.45mm)(9.3mm,16.05mm)  Top Overlay and 
+                     Pad D21-1(10mm,14.15mm)  Top Layer
+   Violation between Track (14.2mm,5.6mm)(14.45mm,5.6mm)  Top Overlay and 
+                     Pad LD22-2(13.25mm,4.5mm)  Top Layer
+   Violation between Track (14.2mm,3.4mm)(14.2mm,5.6mm)  Top Overlay and 
+                     Pad LD22-2(13.25mm,4.5mm)  Top Layer
+   Violation between Track (14.35mm,3.4mm)(14.35mm,5.6mm)  Top Overlay and 
+                     Pad LD22-2(13.25mm,4.5mm)  Top Layer
+   Violation between Track (14.25mm,3.4mm)(14.25mm,5.6mm)  Top Overlay and 
+                     Pad LD22-2(13.25mm,4.5mm)  Top Layer
+   Violation between Track (12.45mm,3.4mm)(14.35mm,3.4mm)  Top Overlay and 
+                     Pad LD22-2(13.25mm,4.5mm)  Top Layer
+   Violation between Track (12.45mm,5.6mm)(14.35mm,5.6mm)  Top Overlay and 
+                     Pad LD22-2(13.25mm,4.5mm)  Top Layer
+   Violation between Track (9.25mm,3.4mm)(9.25mm,5.6mm)  Top Overlay and 
+                     Pad LD22-1(10.25mm,4.5mm)  Top Layer
+   Violation between Track (9.25mm,3.4mm)(11.05mm,3.4mm)  Top Overlay and 
+                     Pad LD22-1(10.25mm,4.5mm)  Top Layer
+   Violation between Track (9.25mm,5.6mm)(11.05mm,5.6mm)  Top Overlay and 
+                     Pad LD22-1(10.25mm,4.5mm)  Top Layer
+   Violation between Text "R23" (13.545mm,10.5mm)  Top Overlay and 
+                     Pad BT-NEG1(16.5mm,10mm)  Multi-Layer
+   Violation between Text "R24" (13.545mm,8.5mm)  Top Overlay and 
+                     Pad BT-NEG1(16.5mm,10mm)  Multi-Layer
+   Violation between Pad J21-S4(3.57mm,4.64mm)  Top Layer and 
+                     Text "J21" (2.5mm,1.75mm)  Top Overlay
+Rule Violations :26
+
+Processing Rule : Silk to Silk (Clearance=0.254mm) (Disabled)(All),(All)
+Rule Violations :0
+
+Processing Rule : Silk primitive without silk layer
+Rule Violations :0
+
+Processing Rule : Unpoured Polygon (Allow unpoured: False)
+Rule Violations :0
 
 
-Violations Detected : 25
-Time Elapsed        : 00:00:00
+Violations Detected : 30
+Time Elapsed        : 00:00:01

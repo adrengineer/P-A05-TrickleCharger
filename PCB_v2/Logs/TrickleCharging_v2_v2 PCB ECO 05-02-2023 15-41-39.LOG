@@ -1,0 +1,19 @@
+Change Component Designator: OldDesignator=D1 NewDesignator=D21
+Change Component Designator: OldDesignator=J1 NewDesignator=J21
+Change Component Designator: OldDesignator=LD1 NewDesignator=LD21
+Change Component Designator: OldDesignator=LD2 NewDesignator=LD22
+Change Component Designator: OldDesignator=R1 NewDesignator=R21
+Change Component Designator: OldDesignator=R2 NewDesignator=R20
+Change Component Designator: OldDesignator=R3 NewDesignator=R23
+Change Component Designator: OldDesignator=R4 NewDesignator=R24
+Change Component Designator: OldDesignator=R5 NewDesignator=R25
+Change Component Description : Designator=R21 Old Description=1/10W ±1% 120O ±100ppm/? 0805 New Description=1/10W ±1% 120O ±100ppm/? 0805
+Change Component Description : Designator=R20 Old Description=1/10W ±1% 120O ±100ppm/? 0805 New Description=1/10W ±1% 120O ±100ppm/? 0805
+Change Component Description : Designator=R23 Old Description=1/10W ±1% 120O ±100ppm/? 0805 New Description=1/10W ±1% 120O ±100ppm/? 0805
+Change Component Description : Designator=R24 Old Description=1/10W ±1% 120O ±100ppm/? 0805 New Description=1/10W ±1% 120O ±100ppm/? 0805
+Change Component Description : Designator=R25 Old Description=1/10W ±1% 120O ±100ppm/? 0805 New Description=1/10W ±1% 120O ±100ppm/? 0805
+Change Net Name : Old Net Name=NetD1_3 New Net Name=NetD21_3
+Change Net Name : Old Net Name=NetJ1_A5 New Net Name=NetJ21_A5
+Change Net Name : Old Net Name=NetJ1_B5 New Net Name=NetJ21_B5
+Change Net Name : Old Net Name=NetLD1_2 New Net Name=NetLD21_2
+Change Net Name : Old Net Name=NetLD2_2 New Net Name=NetLD22_2
