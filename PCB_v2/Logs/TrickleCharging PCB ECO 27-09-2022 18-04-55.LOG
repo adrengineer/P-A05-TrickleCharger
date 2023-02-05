@@ -1,0 +1,31 @@
+Added Component: Designator=BT(BAT_BC2AAPC)
+Added Component: Designator=D1(SOT-23)
+Added Component: Designator=D2(LED_SML-D12FWT86)
+Added Component: Designator=D3(LED_SML-D12FWT86)
+Added Component: Designator=J1(GCT_USB4110-GF-A_REVB)
+Added Component: Designator=R1(RES 0603 120R)
+Added Component: Designator=R2(RES 0603 120R)
+Added Component: Designator=R3(RES 0603 470R)
+Added Pin To Net: NetName=GND Pin=BT-NEG
+Added Pin To Net: NetName=GND Pin=BT-NEG
+Added Pin To Net: NetName=GND Pin=R3-1
+Added Net: Name=GND
+Added Pin To Net: NetName=NetBT_POS Pin=BT-POS
+Added Pin To Net: NetName=NetBT_POS Pin=BT-POS
+Added Pin To Net: NetName=NetBT_POS Pin=R1-1
+Added Pin To Net: NetName=NetBT_POS Pin=R2-1
+Added Net: Name=NetBT_POS
+Added Pin To Net: NetName=NetD1_3 Pin=D1-3
+Added Pin To Net: NetName=NetD1_3 Pin=D2-A
+Added Pin To Net: NetName=NetD1_3 Pin=R1-2
+Added Net: Name=NetD1_3
+Added Pin To Net: NetName=NetD2_C Pin=D2-C
+Added Pin To Net: NetName=NetD2_C Pin=R2-2
+Added Net: Name=NetD2_C
+Added Pin To Net: NetName=NetD3_C Pin=D3-C
+Added Pin To Net: NetName=NetD3_C Pin=R3-2
+Added Net: Name=NetD3_C
+Added Pin To Net: NetName=VCC Pin=D1-1
+Added Pin To Net: NetName=VCC Pin=D3-A
+Added Net: Name=VCC
+Added Class: Name=TrickleCharging

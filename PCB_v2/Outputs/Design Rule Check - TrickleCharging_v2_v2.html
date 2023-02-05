@@ -1,0 +1,445 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #E2F2F8;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\CS\Templates\CircuitStudio_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">04/02/2023</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">21:28:49</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc" class="file"><acronym title="C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc">C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Errors:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">25</td></tr>
+</table>
+</td>
+</table><a name="IDJN1OHIVA4BDVE5NIFBT2ZTLFHDHIB5WVYBZY3UM032T4TDGBI2BN"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Errors</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRRBA4QIOI0XOMQFR1ZVOU11XSN5XSQHB1W1DXIHCD1R0VAJFYEMO">Unpoured Polygon (Allow unpoured: False)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFTXGYVCSTBVRHNVF5SODQUT3UOWYZAGB21YK4KHTZZRNANTNJU3D">Silk primitive without silk layer</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVU21A0HLGDVTOVZBS22D0EUU5CT3ETRDVIG5ZMPHA3MNTDGJ5Q0H">Silk to Silk (Clearance=0.254mm) (Disabled)(All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2Y05SLXSU11KLRMCGSKNW2MWALZAQY5SVWK0PRKCBGCQ2TBTLCQB">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">21</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOYXNYBBMSYDPNKV3KTCJIYBSMLVZJV0R1I5G43OV0ONBGOGL1UBH">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDK1JM2KFIL2LPC3YFR4TDOHG3KKEOKHPM5NXRC0CLUXHXQFHAVIUI">Hole To Hole Clearance (Gap=0.5mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJBO23AYH0HEQPYQ35S04QYTZFNFVCUQ1OJT01BG233IWM1BUIW3P">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBCSBNR5K2AIWMKN1NBSHBZ0Z5IS4J00EZ4R3ZHN1U11QEAA5H0WH">Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRR3HVIZOP1LHDNBTBQ0NRB0CQHP1LBSRH13II1NBUPZXFSVNPBSC">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUK3EA4BTAOT1KV4KMGIXIHYBSNE2POUAWT4P4QECBDIHRPPX2CAE">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEXSVQBK01HC4JFKN5ZOLBDQOMO1HUXXUMQVHELNHZMIMBWOVD5NI">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQ4F3P5DLQXX4JFKDM3RCOB1W3PGID5VV0STBUZKBHGVJGWAU5AZK">Width Constraint (Min=0.127mm) (Max=3mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGAU5ADROFERGMKXMKFVRVZ5PRCHYHPTE5FQC1SDLJH13JSFHYY1K">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">25</td>
+</tr>
+</table><br><a name="ID2Y05SLXSU11KLRMCGSKNW2MWALZAQY5SVWK0PRKCBGCQ2TBTLCQB"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1757.811mil|Location2.X=1797.307mil|Location1.Y=1535.37mil|Location2.Y=1578.803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1757.811mil|Location2.X=1797.307mil|Location1.Y=1535.37mil|Location2.Y=1578.803mil|Absolute=True">Pad D1-1(10mm,14.15mm)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1739.37mil|Location2.X=1755.118mil|Location1.Y=1524.803mil|Location2.Y=1540.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1739.37mil|Location2.X=1755.118mil|Location1.Y=1524.803mil|Location2.Y=1540.551mil|Absolute=True">Arc (9.23mm,13.53mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1744.094mil|Location2.X=1751.968mil|Location1.Y=1129.921mil|Location2.Y=1224.409mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1744.094mil|Location2.X=1751.968mil|Location1.Y=1129.921mil|Location2.Y=1224.409mil|Absolute=True">Track (9.25mm,3.4mm)(9.25mm,5.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1753.874mil|Location2.X=1820.929mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1753.874mil|Location2.X=1820.929mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True">Pad LD2-1(10.25mm,4.5mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1744.094mil|Location2.X=1822.835mil|Location1.Y=1129.921mil|Location2.Y=1137.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1744.094mil|Location2.X=1822.835mil|Location1.Y=1129.921mil|Location2.Y=1137.795mil|Absolute=True">Track (9.25mm,3.4mm)(11.05mm,3.4mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1753.874mil|Location2.X=1820.929mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1753.874mil|Location2.X=1820.929mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True">Pad LD2-1(10.25mm,4.5mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1744.094mil|Location2.X=1822.835mil|Location1.Y=1216.535mil|Location2.Y=1224.409mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1744.094mil|Location2.X=1822.835mil|Location1.Y=1216.535mil|Location2.Y=1224.409mil|Absolute=True">Track (9.25mm,5.6mm)(11.05mm,5.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1753.874mil|Location2.X=1820.929mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1753.874mil|Location2.X=1820.929mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True">Pad LD2-1(10.25mm,4.5mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1938.913mil|Location2.X=1956.756mil|Location1.Y=1216.472mil|Location2.Y=1224.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1938.913mil|Location2.X=1956.756mil|Location1.Y=1216.472mil|Location2.Y=1224.472mil|Absolute=True">Track (14.2mm,5.6mm)(14.45mm,5.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1871.984mil|Location2.X=1939.039mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1871.984mil|Location2.X=1939.039mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True">Pad LD2-2(13.25mm,4.5mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1940.882mil|Location2.X=1948.882mil|Location1.Y=1129.858mil|Location2.Y=1224.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1940.882mil|Location2.X=1948.882mil|Location1.Y=1129.858mil|Location2.Y=1224.472mil|Absolute=True">Track (14.25mm,3.4mm)(14.25mm,5.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1871.984mil|Location2.X=1939.039mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1871.984mil|Location2.X=1939.039mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True">Pad LD2-2(13.25mm,4.5mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=1952.756mil|Location1.Y=1129.921mil|Location2.Y=1224.409mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.882mil|Location2.X=1952.756mil|Location1.Y=1129.921mil|Location2.Y=1224.409mil|Absolute=True">Track (14.35mm,3.4mm)(14.35mm,5.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1871.984mil|Location2.X=1939.039mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1871.984mil|Location2.X=1939.039mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True">Pad LD2-2(13.25mm,4.5mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1938.913mil|Location2.X=1946.913mil|Location1.Y=1129.858mil|Location2.Y=1224.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1938.913mil|Location2.X=1946.913mil|Location1.Y=1129.858mil|Location2.Y=1224.472mil|Absolute=True">Track (14.2mm,3.4mm)(14.2mm,5.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1871.984mil|Location2.X=1939.039mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1871.984mil|Location2.X=1939.039mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True">Pad LD2-2(13.25mm,4.5mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.079mil|Location2.X=1952.756mil|Location1.Y=1129.921mil|Location2.Y=1137.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.079mil|Location2.X=1952.756mil|Location1.Y=1129.921mil|Location2.Y=1137.795mil|Absolute=True">Track (12.45mm,3.4mm)(14.35mm,3.4mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1871.984mil|Location2.X=1939.039mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1871.984mil|Location2.X=1939.039mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True">Pad LD2-2(13.25mm,4.5mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.079mil|Location2.X=1952.756mil|Location1.Y=1216.535mil|Location2.Y=1224.409mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.079mil|Location2.X=1952.756mil|Location1.Y=1216.535mil|Location2.Y=1224.409mil|Absolute=True">Track (12.45mm,5.6mm)(14.35mm,5.6mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1871.984mil|Location2.X=1939.039mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1871.984mil|Location2.X=1939.039mil|Location1.Y=1138.716mil|Location2.Y=1215.614mil|Absolute=True">Pad LD2-2(13.25mm,4.5mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1745.079mil|Location2.X=1754.921mil|Location1.Y=1563.976mil|Location2.Y=1636.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1745.079mil|Location2.X=1754.921mil|Location1.Y=1563.976mil|Location2.Y=1636.811mil|Absolute=True">Track (9.3mm,14.45mm)(9.3mm,16.05mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1757.811mil|Location2.X=1797.307mil|Location1.Y=1535.37mil|Location2.Y=1578.803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1757.811mil|Location2.X=1797.307mil|Location1.Y=1535.37mil|Location2.Y=1578.803mil|Absolute=True">Pad D1-1(10mm,14.15mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1878.937mil|Location2.X=1888.78mil|Location1.Y=1563.976mil|Location2.Y=1636.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1878.937mil|Location2.X=1888.78mil|Location1.Y=1563.976mil|Location2.Y=1636.811mil|Absolute=True">Track (12.7mm,14.45mm)(12.7mm,16.05mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1836.551mil|Location2.X=1876.047mil|Location1.Y=1535.37mil|Location2.Y=1578.803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1836.551mil|Location2.X=1876.047mil|Location1.Y=1535.37mil|Location2.Y=1578.803mil|Absolute=True">Pad D1-2(12mm,14.15mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.638mil|Location2.X=1905.512mil|Location1.Y=1643.701mil|Location2.Y=1722.441mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.638mil|Location2.X=1905.512mil|Location1.Y=1643.701mil|Location2.Y=1722.441mil|Absolute=True">Track (13.15mm,16.45mm)(13.15mm,18.25mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1645.606mil|Location2.Y=1712.661mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1645.606mil|Location2.Y=1712.661mil|Absolute=True">Pad LD1-1(14.25mm,17.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1984.252mil|Location2.X=1992.126mil|Location1.Y=1643.701mil|Location2.Y=1722.441mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1984.252mil|Location2.X=1992.126mil|Location1.Y=1643.701mil|Location2.Y=1722.441mil|Absolute=True">Track (15.35mm,16.45mm)(15.35mm,18.25mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1645.606mil|Location2.Y=1712.661mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1645.606mil|Location2.Y=1712.661mil|Absolute=True">Pad LD1-1(14.25mm,17.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.638mil|Location2.X=1992.126mil|Location1.Y=1714.567mil|Location2.Y=1722.441mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.638mil|Location2.X=1992.126mil|Location1.Y=1714.567mil|Location2.Y=1722.441mil|Absolute=True">Track (13.15mm,18.25mm)(15.35mm,18.25mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1645.606mil|Location2.Y=1712.661mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1645.606mil|Location2.Y=1712.661mil|Absolute=True">Pad LD1-1(14.25mm,17.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.638mil|Location2.X=1905.512mil|Location1.Y=1513.78mil|Location2.Y=1596.457mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.638mil|Location2.X=1905.512mil|Location1.Y=1513.78mil|Location2.Y=1596.457mil|Absolute=True">Track (13.15mm,13.15mm)(13.15mm,15.05mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1527.496mil|Location2.Y=1594.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1527.496mil|Location2.Y=1594.551mil|Absolute=True">Pad LD1-2(14.25mm,14.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1984.252mil|Location2.X=1992.126mil|Location1.Y=1513.78mil|Location2.Y=1596.457mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1984.252mil|Location2.X=1992.126mil|Location1.Y=1513.78mil|Location2.Y=1596.457mil|Absolute=True">Track (15.35mm,13.15mm)(15.35mm,15.05mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1527.496mil|Location2.Y=1594.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1527.496mil|Location2.Y=1594.551mil|Absolute=True">Pad LD1-2(14.25mm,14.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1984.189mil|Location2.X=1992.189mil|Location1.Y=1509.78mil|Location2.Y=1527.622mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1984.189mil|Location2.X=1992.189mil|Location1.Y=1509.78mil|Location2.Y=1527.622mil|Absolute=True">Track (15.35mm,13.05mm)(15.35mm,13.3mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1527.496mil|Location2.Y=1594.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1527.496mil|Location2.Y=1594.551mil|Absolute=True">Pad LD1-2(14.25mm,14.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.575mil|Location2.X=1992.189mil|Location1.Y=1517.653mil|Location2.Y=1525.653mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.575mil|Location2.X=1992.189mil|Location1.Y=1517.653mil|Location2.Y=1525.653mil|Absolute=True">Track (13.15mm,13.25mm)(15.35mm,13.25mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1527.496mil|Location2.Y=1594.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1527.496mil|Location2.Y=1594.551mil|Absolute=True">Pad LD1-2(14.25mm,14.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.638mil|Location2.X=1992.126mil|Location1.Y=1513.78mil|Location2.Y=1521.653mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.638mil|Location2.X=1992.126mil|Location1.Y=1513.78mil|Location2.Y=1521.653mil|Absolute=True">Track (13.15mm,13.15mm)(15.35mm,13.15mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1527.496mil|Location2.Y=1594.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1527.496mil|Location2.Y=1594.551mil|Absolute=True">Pad LD1-2(14.25mm,14.25mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.575mil|Location2.X=1992.189mil|Location1.Y=1519.622mil|Location2.Y=1527.622mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.575mil|Location2.X=1992.189mil|Location1.Y=1519.622mil|Location2.Y=1527.622mil|Absolute=True">Track (13.15mm,13.3mm)(15.35mm,13.3mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1527.496mil|Location2.Y=1594.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.433mil|Location2.X=1983.331mil|Location1.Y=1527.496mil|Location2.Y=1594.551mil|Absolute=True">Pad LD1-2(14.25mm,14.25mm)  Top Layer</acronym></a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDGAU5ADROFERGMKXMKFVRVZ5PRCHYHPTE5FQC1SDLJH13JSFHYY1K"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Clearance Constraint (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1642.653mil|Location2.X=1676.244mil|Location1.Y=1253.283mil|Location2.Y=1286.874mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1642.653mil|Location2.X=1676.244mil|Location1.Y=1253.283mil|Location2.Y=1286.874mil|Absolute=True">Pad J1-(7mm,6.86mm)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1675.134mil|Location2.X=1728.409mil|Location1.Y=1242.063mil|Location2.Y=1273.685mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1675.134mil|Location2.X=1728.409mil|Location1.Y=1242.063mil|Location2.Y=1273.685mil|Absolute=True">Pad J1-B1/A12(8.075mm,6.55mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1642.653mil|Location2.X=1676.244mil|Location1.Y=1253.283mil|Location2.Y=1286.874mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1642.653mil|Location2.X=1676.244mil|Location1.Y=1253.283mil|Location2.Y=1286.874mil|Absolute=True">Pad J1-(7mm,6.86mm)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1675.134mil|Location2.X=1728.409mil|Location1.Y=1273.559mil|Location2.Y=1305.181mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1675.134mil|Location2.X=1728.409mil|Location1.Y=1273.559mil|Location2.Y=1305.181mil|Absolute=True">Pad J1-B4/A9(8.075mm,7.35mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1642.653mil|Location2.X=1676.244mil|Location1.Y=1480.842mil|Location2.Y=1514.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1642.653mil|Location2.X=1676.244mil|Location1.Y=1480.842mil|Location2.Y=1514.433mil|Absolute=True">Pad J1-(7mm,12.64mm)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1675.134mil|Location2.X=1728.409mil|Location1.Y=1462.535mil|Location2.Y=1494.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1675.134mil|Location2.X=1728.409mil|Location1.Y=1462.535mil|Location2.Y=1494.157mil|Absolute=True">Pad J1-A4/B9(8.075mm,12.15mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1642.653mil|Location2.X=1676.244mil|Location1.Y=1480.842mil|Location2.Y=1514.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1642.653mil|Location2.X=1676.244mil|Location1.Y=1480.842mil|Location2.Y=1514.433mil|Absolute=True">Pad J1-(7mm,12.64mm)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1675.134mil|Location2.X=1728.409mil|Location1.Y=1494.032mil|Location2.Y=1525.653mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\adren\Documents\P_A05_TrickleCharger\PCB_v2\TrickleCharging_v2_v2.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1675.134mil|Location2.X=1728.409mil|Location1.Y=1494.032mil|Location2.Y=1525.653mil|Absolute=True">Pad J1-A1/B12(8.075mm,12.95mm)  Top Layer</acronym></a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

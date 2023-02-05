@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=+5 Pin=D8-1
+Removed Pin From Net: NetName=+5 Pin=D12-A
+Removed Pin From Net: NetName=GND Pin=R12-1
+Removed Member From Class: ClassName=TrickleCharging Member=BT1
+Removed Member From Class: ClassName=TrickleCharging Member=D8
+Removed Member From Class: ClassName=TrickleCharging Member=D10
+Removed Member From Class: ClassName=TrickleCharging Member=D12
+Removed Member From Class: ClassName=TrickleCharging Member=J2
+Removed Member From Class: ClassName=TrickleCharging Member=R8
+Removed Member From Class: ClassName=TrickleCharging Member=R10
+Removed Member From Class: ClassName=TrickleCharging Member=R12
+Change Component Footprint: Designator=BT Old Footprint=BAT_BC2AAPC New Footprint=BAT_BC2AAPC - dompact
+Change Component Designator: OldDesignator=J2 NewDesignator=J1
+Change Net Name : Old Net Name=NetD7_3 New Net Name=NetD1_3
+Change Net Name : Old Net Name=NetD9_C New Net Name=NetD2_C
+Change Net Name : Old Net Name=NetD11_C New Net Name=NetD3_C

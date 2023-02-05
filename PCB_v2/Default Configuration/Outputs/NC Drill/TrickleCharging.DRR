@@ -1,0 +1,26 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: TrickleCharging.CSPcbDoc   28/09/2022  19:14:31
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : TrickleCharging-RoundHoles.TXT
+ASCII SlotHoles File : TrickleCharging-SlotHoles.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        0.7mm (27.559mil)        Round          20               164.36 mm (6.47 Inch)
+T2        0.7mm (27.559mil)        Slot           16               7425.14 mm (292.33 Inch)
+T3        0.7112mm (28mil)         Round          10               202.79 mm (7.98 Inch)
+T4        0.9mm (35.433mil)        Round          12               146.87 mm (5.78 Inch)
+T5        0.92mm (36.221mil)       Round          12               52.50 mm (2.07 Inch)
+T6        1.17mm (46.063mil)       Round          8                275.02 mm (10.83 Inch)
+T7        2.3mm (90.551mil)        Round          4                67.99 mm (2.68 Inch)
+T8        3.56mm (140.157mil)      Round          4                64.98 mm (2.56 Inch)
+T9        0.65mm (25.591mil)       Round          10        NPTH   116.46 mm (4.59 Inch)
+T10       1.55mm (61.024mil)       Round          8         NPTH   60.55 mm (2.38 Inch)
+T11       2.3mm (90.551mil)        Round          6         NPTH   58.64 mm (2.31 Inch)
+T12       3.56mm (140.157mil)      Round          4         NPTH   64.98 mm (2.56 Inch)
+---------------------------------------------------------------------------
+Totals                                            114              8700.27 mm (342.53 Inch)
+
+Total Processing Time (hh:mm:ss) : 00:00:01

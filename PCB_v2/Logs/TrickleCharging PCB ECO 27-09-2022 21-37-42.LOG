@@ -1,0 +1,86 @@
+Change Component Designator: OldDesignator=P NewDesignator=P11
+Change Component Designator: OldDesignator=P NewDesignator=P13
+Change Component Designator: OldDesignator=P NewDesignator=P14
+Added Component: Designator=CN3(USB-B-S-RA)
+Added Component: Designator=P12(KYCON_KUSBX-SMT2AP5S-B)
+Added Pin To Net: NetName=GND Pin=CN1-0
+Added Pin To Net: NetName=GND Pin=CN1-0
+Added Pin To Net: NetName=GND Pin=CN1-4
+Added Pin To Net: NetName=GND Pin=CN1-5
+Added Pin To Net: NetName=GND Pin=CN2-0
+Added Pin To Net: NetName=GND Pin=CN2-0
+Added Pin To Net: NetName=GND Pin=CN2-4
+Added Pin To Net: NetName=GND Pin=CN2-4
+Added Pin To Net: NetName=GND Pin=CN2-5
+Added Pin To Net: NetName=GND Pin=CN3-0
+Added Pin To Net: NetName=GND Pin=CN3-0
+Added Pin To Net: NetName=GND Pin=CN3-4
+Added Pin To Net: NetName=GND Pin=CN3-4
+Added Pin To Net: NetName=GND Pin=CN3-5
+Added Pin To Net: NetName=GND Pin=CN4-4
+Added Pin To Net: NetName=GND Pin=CN4-5
+Added Pin To Net: NetName=GND Pin=J2-A1/B12
+Added Pin To Net: NetName=GND Pin=J2-B1/A12
+Added Pin To Net: NetName=GND Pin=J2-S1
+Added Pin To Net: NetName=GND Pin=J2-S2
+Added Pin To Net: NetName=GND Pin=J2-S3
+Added Pin To Net: NetName=GND Pin=J2-S4
+Added Pin To Net: NetName=GND Pin=P1-4
+Added Pin To Net: NetName=GND Pin=P2-4
+Added Pin To Net: NetName=GND Pin=P3-4
+Added Pin To Net: NetName=GND Pin=P11-4
+Added Pin To Net: NetName=GND Pin=P11-P1
+Added Pin To Net: NetName=GND Pin=P11-P2
+Added Pin To Net: NetName=GND Pin=P12-4
+Added Pin To Net: NetName=GND Pin=P12-P1
+Added Pin To Net: NetName=GND Pin=P12-P2
+Added Pin To Net: NetName=GND Pin=P13-4
+Added Pin To Net: NetName=GND Pin=P13-P1
+Added Pin To Net: NetName=GND Pin=P13-P2
+Added Pin To Net: NetName=GND Pin=P14-4
+Added Pin To Net: NetName=GND Pin=P14-P1
+Added Pin To Net: NetName=GND Pin=P14-P2
+Added Pin To Net: NetName=NetCN1_1 Pin=CN1-1
+Added Pin To Net: NetName=NetCN1_1 Pin=P11-1
+Added Net: Name=NetCN1_1
+Added Pin To Net: NetName=NetCN1_2 Pin=CN1-2
+Added Pin To Net: NetName=NetCN1_2 Pin=P11-2
+Added Net: Name=NetCN1_2
+Added Pin To Net: NetName=NetCN1_3 Pin=CN1-3
+Added Pin To Net: NetName=NetCN1_3 Pin=P11-3
+Added Net: Name=NetCN1_3
+Added Pin To Net: NetName=NetCN2_1 Pin=CN2-1
+Added Pin To Net: NetName=NetCN2_1 Pin=P12-1
+Added Net: Name=NetCN2_1
+Added Pin To Net: NetName=NetCN2_2 Pin=CN2-2
+Added Pin To Net: NetName=NetCN2_2 Pin=P1-2
+Added Net: Name=NetCN2_2
+Added Pin To Net: NetName=NetCN2_3 Pin=CN2-3
+Added Pin To Net: NetName=NetCN2_3 Pin=P1-3
+Added Net: Name=NetCN2_3
+Added Pin To Net: NetName=NetCN3_1 Pin=CN3-1
+Added Pin To Net: NetName=NetCN3_1 Pin=P2-1
+Added Net: Name=NetCN3_1
+Added Pin To Net: NetName=NetCN3_2 Pin=CN3-2
+Added Pin To Net: NetName=NetCN3_2 Pin=P2-2
+Added Net: Name=NetCN3_2
+Added Pin To Net: NetName=NetCN3_3 Pin=CN3-3
+Added Pin To Net: NetName=NetCN3_3 Pin=P2-3
+Added Net: Name=NetCN3_3
+Added Pin To Net: NetName=NetCN4_1 Pin=CN4-1
+Added Pin To Net: NetName=NetCN4_1 Pin=P14-1
+Added Net: Name=NetCN4_1
+Added Pin To Net: NetName=NetJ2_A4/B9 Pin=J2-A4/B9
+Added Pin To Net: NetName=NetJ2_A4/B9 Pin=J2-B4/A9
+Added Pin To Net: NetName=NetJ2_A4/B9 Pin=P13-1
+Added Net: Name=NetJ2_A4/B9
+Added Pin To Net: NetName=NetJ2_A6 Pin=J2-A6
+Added Pin To Net: NetName=NetJ2_A6 Pin=J2-B6
+Added Pin To Net: NetName=NetJ2_A6 Pin=P13-3
+Added Net: Name=NetJ2_A6
+Added Pin To Net: NetName=NetJ2_A7 Pin=J2-A7
+Added Pin To Net: NetName=NetJ2_A7 Pin=J2-B7
+Added Net: Name=NetJ2_A7
+Added Member To Class: ClassName=TrickleCharging Member=Component P11 KUSBX-SMT2AP5S-B
+Added Member To Class: ClassName=TrickleCharging Member=Component P12 KUSBX-SMT2AP5S-B
+Added Member To Class: ClassName=TrickleCharging Member=Component P14 KUSBX-SMT2AP5S-B

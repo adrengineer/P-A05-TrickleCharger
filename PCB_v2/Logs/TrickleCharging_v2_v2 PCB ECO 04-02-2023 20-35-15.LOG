@@ -1,0 +1,104 @@
+Removed Pin From Net: NetName=GND Pin=BT-NEG2
+Removed Pin From Net: NetName=GND Pin=CN1-0
+Removed Pin From Net: NetName=GND Pin=CN1-0
+Removed Pin From Net: NetName=GND Pin=CN1-4
+Removed Pin From Net: NetName=GND Pin=CN1-5
+Removed Pin From Net: NetName=GND Pin=CN2-0
+Removed Pin From Net: NetName=GND Pin=CN2-0
+Removed Pin From Net: NetName=GND Pin=CN2-4
+Removed Pin From Net: NetName=GND Pin=CN2-4
+Removed Pin From Net: NetName=GND Pin=CN2-5
+Removed Pin From Net: NetName=GND Pin=CN3-0
+Removed Pin From Net: NetName=GND Pin=CN3-0
+Removed Pin From Net: NetName=GND Pin=CN3-4
+Removed Pin From Net: NetName=GND Pin=CN3-4
+Removed Pin From Net: NetName=GND Pin=CN3-5
+Removed Pin From Net: NetName=GND Pin=CN4-4
+Removed Pin From Net: NetName=GND Pin=CN4-5
+Removed Pin From Net: NetName=GND Pin=CN5-4
+Removed Pin From Net: NetName=GND Pin=CN5-5
+Removed Pin From Net: NetName=GND Pin=CN6-4
+Removed Pin From Net: NetName=GND Pin=CN6-5
+Removed Pin From Net: NetName=NetD1_3 Pin=D2-A
+Removed Pin From Net: NetName=+5 Pin=D3-A
+Removed Pin From Net: NetName=+5 Pin=D4-1
+Removed Pin From Net: NetName=GND Pin=J2-A1/B12
+Removed Pin From Net: NetName=GND Pin=J2-B1/A12
+Removed Pin From Net: NetName=GND Pin=J2-S1
+Removed Pin From Net: NetName=GND Pin=J2-S2
+Removed Pin From Net: NetName=GND Pin=J2-S3
+Removed Pin From Net: NetName=GND Pin=J2-S4
+Removed Pin From Net: NetName=GND Pin=J2_1-A1/B12
+Removed Pin From Net: NetName=GND Pin=J2_1-B1/A12
+Removed Pin From Net: NetName=GND Pin=J2_2-A1/B12
+Removed Pin From Net: NetName=GND Pin=J2_2-B1/A12
+Removed Pin From Net: NetName=GND Pin=P1-4
+Removed Pin From Net: NetName=GND Pin=P2-4
+Removed Pin From Net: NetName=GND Pin=P3-4
+Removed Pin From Net: NetName=GND Pin=P11-4
+Removed Pin From Net: NetName=GND Pin=P11-P1
+Removed Pin From Net: NetName=GND Pin=P11-P2
+Removed Pin From Net: NetName=GND Pin=P12-4
+Removed Pin From Net: NetName=GND Pin=P12-P1
+Removed Pin From Net: NetName=GND Pin=P12-P2
+Removed Pin From Net: NetName=GND Pin=P13-4
+Removed Pin From Net: NetName=GND Pin=P13-P1
+Removed Pin From Net: NetName=GND Pin=P13-P2
+Removed Pin From Net: NetName=GND Pin=P14-4
+Removed Pin From Net: NetName=GND Pin=P14-P1
+Removed Pin From Net: NetName=GND Pin=P14-P2
+Removed Pin From Net: NetName=NetBT_POS1 Pin=R1-1
+Removed Pin From Net: NetName=NetD1_3 Pin=R1-2
+Removed Pin From Net: NetName=NetBT_POS1 Pin=R2-1
+Removed Pin From Net: NetName=GND Pin=R3-1
+Removed Pin From Net: NetName=GND Pin=R6-1
+Removed Pin From Net: NetName=NetJ1_B5 Pin=R6-2
+Removed Pin From Net: NetName=GND Pin=R7-1
+Removed Pin From Net: NetName=NetJ1_A5 Pin=R7-2
+Removed Member From Class: ClassName=TrickleCharging Member=CN1
+Removed Member From Class: ClassName=TrickleCharging Member=CN2
+Removed Member From Class: ClassName=TrickleCharging Member=CN4
+Removed Member From Class: ClassName=TrickleCharging Member=D2
+Removed Member From Class: ClassName=TrickleCharging Member=D3
+Removed Member From Class: ClassName=TrickleCharging Member=D4
+Removed Member From Class: ClassName=TrickleCharging Member=D5
+Removed Member From Class: ClassName=TrickleCharging Member=J2
+Removed Member From Class: ClassName=TrickleCharging Member=P1
+Removed Member From Class: ClassName=TrickleCharging Member=P2
+Removed Member From Class: ClassName=TrickleCharging Member=P3
+Removed Member From Class: ClassName=TrickleCharging Member=P11
+Removed Member From Class: ClassName=TrickleCharging Member=P12
+Removed Member From Class: ClassName=TrickleCharging Member=P14
+Removed Member From Class: ClassName=TrickleCharging Member=R1
+Removed Member From Class: ClassName=TrickleCharging Member=R2
+Removed Member From Class: ClassName=TrickleCharging Member=R3
+Removed Member From Class: ClassName=TrickleCharging Member=R4
+Removed Member From Class: ClassName=TrickleCharging Member=R5
+Removed Member From Class: ClassName=TrickleCharging Member=R6
+Removed Member From Class: ClassName=TrickleCharging Member=R7
+Change Component DesignItemId : Designator=BT Old DesignItemId=BC2AAPC New DesignItemId=BC2AAPC_single
+Change Component Footprint: Designator=BT Old Footprint=BAT_BC2AAPC - dompact New Footprint=BAT_BC2AAPC_single
+Change Component Comment : Designator=BT Old Comment=BC2AAPC New Comment=BC2AAPC_single
+Added Component: Designator=LD?(LED 3X1.5)
+Added Component: Designator=LD?(LED 3X1.5)
+Added Component: Designator=R?(RESC2012X60N)
+Added Component: Designator=R?(RESC2012X60N)
+Added Component: Designator=R?(RESC2012X60N)
+Added Component: Designator=R?(RESC2012X60N)
+Added Component: Designator=R?(RESC2012X60N)
+Added Pin To Net: NetName=+5 Pin=LD?-1
+Added Pin To Net: NetName=NetD1_3 Pin=LD?-1
+Added Pin To Net: NetName=GND Pin=R?-1
+Added Pin To Net: NetName=GND Pin=R?-1
+Added Pin To Net: NetName=GND Pin=R?-1
+Added Pin To Net: NetName=NetBT_POS1 Pin=R?-1
+Added Pin To Net: NetName=NetBT_POS1 Pin=R?-1
+Added Pin To Net: NetName=NetD1_3 Pin=R?-2
+Added Pin To Net: NetName=NetJ1_A5 Pin=R?-2
+Added Pin To Net: NetName=NetJ1_B5 Pin=R?-2
+Added Pin To Net: NetName=NetLD?_2 Pin=LD?-2
+Added Pin To Net: NetName=NetLD?_2 Pin=R?-2
+Added Net: Name=NetLD?_2
+Added Member To Class: ClassName=TrickleCharging Member=Component BT BC2AAPC_single
+Added Member To Class: ClassName=TrickleCharging Member=Component LD? GREEN
+Added Member To Class: ClassName=TrickleCharging Member=Component R? 120R

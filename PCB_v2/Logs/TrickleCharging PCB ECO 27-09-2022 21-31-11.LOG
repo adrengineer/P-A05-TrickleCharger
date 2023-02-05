@@ -1,0 +1,9 @@
+Change Component DesignItemId : Designator=CN2 Old DesignItemId=MINI USB TYPE B New DesignItemId=USB Type B
+Change Component DesignItemId : Designator=CN2 Old DesignItemId=USB Type B New DesignItemId=MINI USB TYPE B
+Change Component Footprint: Designator=CN2 Old Footprint=MINI USB-B New Footprint=USB-B-S-RA
+Change Component Footprint: Designator=CN2 Old Footprint=USB-B-S-RA New Footprint=MINI USB-B
+Change Component Comment : Designator=CN2 Old Comment=MINI USB TYPE B New Comment=USB Type B
+Change Component Comment : Designator=CN2 Old Comment=USB Type B New Comment=MINI USB TYPE B
+Added Component: Designator=CN4(10103594-0001LF)
+Added Component: Designator=P(KYCON_KUSBX-SMT2AP5S-B)
+Added Member To Class: ClassName=TrickleCharging Member=Component CN4 Micro USB SKT SMD

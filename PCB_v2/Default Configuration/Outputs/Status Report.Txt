@@ -1,0 +1,17 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 19:14:31 On 28/09/2022
+
+Output: NC Drill
+Type  : NC Drill
+From  : PCB Document [TrickleCharging.CSPcbDoc]
+   Generated File[TrickleCharging-RoundHoles.TXT]
+   Generated File[TrickleCharging-SlotHoles.TXT]
+   Generated File[TrickleCharging.LDP]
+   Generated File[TrickleCharging.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 19:14:32 On 28/09/2022

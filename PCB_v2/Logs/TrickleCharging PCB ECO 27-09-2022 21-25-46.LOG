@@ -1,0 +1,14 @@
+Change Component DesignItemId : Designator=CN2 Old DesignItemId=MINI USB TYPE B New DesignItemId=USB Type B
+Change Component Footprint: Designator=CN2 Old Footprint=MINI USB-B New Footprint=USB-B-S-RA
+Change Component Comment : Designator=CN2 Old Comment=MINI USB TYPE B New Comment=USB Type B
+Added Component: Designator=CN1(MINI USB-B)
+Added Component: Designator=CN2(MINI USB-B)
+Added Component: Designator=P1(OST_USB-A1HSW6)
+Added Component: Designator=P(KYCON_KUSBX-SMT2AP5S-B)
+Added Component: Designator=P(KYCON_KUSBX-SMT2AP5S-B)
+Added Pin To Net: NetName=NetP_P1 Pin=P-P1
+Added Pin To Net: NetName=NetP_P1 Pin=P-P2
+Added Member To Class: ClassName=TrickleCharging Member=Component CN1 MINI USB TYPE B
+Added Member To Class: ClassName=TrickleCharging Member=Component CN2 MINI USB TYPE B
+Added Member To Class: ClassName=TrickleCharging Member=Component P1 USB-A1HSW6
+Added Member To Class: ClassName=TrickleCharging Member=Component P KUSBX-SMT2AP5S-B

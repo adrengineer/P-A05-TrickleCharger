@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=GND Pin=BT-NEG
+Removed Pin From Net: NetName=GND Pin=BT-NEG
+Change Component Footprint: Designator=BT Old Footprint= New Footprint=BAT_BC2AAPC - dompact
+Added Pin To Net: NetName=GND Pin=BT-NEG1
+Added Pin To Net: NetName=GND Pin=BT-NEG2
+Added Pin To Net: NetName=NetBT_POS1 Pin=BT-POS1
+Added Pin To Net: NetName=NetBT_POS1 Pin=R1-1
+Added Pin To Net: NetName=NetBT_POS1 Pin=R2-1
+Added Net: Name=NetBT_POS1
+Added Pin To Net: NetName=NetBT_POS2 Pin=BT-POS2
+Added Pin To Net: NetName=NetBT_POS2 Pin=R4-1
+Added Pin To Net: NetName=NetBT_POS2 Pin=R5-1
+Added Net: Name=NetBT_POS2

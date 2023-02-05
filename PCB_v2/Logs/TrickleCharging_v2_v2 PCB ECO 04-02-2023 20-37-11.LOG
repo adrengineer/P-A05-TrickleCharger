@@ -1,0 +1,20 @@
+Change Component Designator: OldDesignator=LD? NewDesignator=LD1
+Change Component Designator: OldDesignator=LD? NewDesignator=LD2
+Change Component Designator: OldDesignator=R? NewDesignator=R1
+Change Component Designator: OldDesignator=R? NewDesignator=R2
+Change Component Designator: OldDesignator=R? NewDesignator=R3
+Change Component Designator: OldDesignator=R? NewDesignator=R4
+Change Component Designator: OldDesignator=R? NewDesignator=R5
+Added Component: Designator=BT(BAT_BC2AAPC_single)
+Added Pin To Net: NetName=GND Pin=BT-NEG1
+Added Pin To Net: NetName=NetBT_POS1 Pin=BT-POS1
+Change Net Name : Old Net Name=NetLD?_2 New Net Name=NetLD2_2
+Added Pin To Net: NetName=NetLD1_2 Pin=LD1-2
+Added Pin To Net: NetName=NetLD1_2 Pin=R4-2
+Added Net: Name=NetLD1_2
+Added Member To Class: ClassName=TrickleCharging Member=Component BT BC2AAPC_single
+Added Member To Class: ClassName=TrickleCharging Member=Component LD2 RED
+Added Member To Class: ClassName=TrickleCharging Member=Component R2 120R
+Added Member To Class: ClassName=TrickleCharging Member=Component R3 120R
+Added Member To Class: ClassName=TrickleCharging Member=Component R4 120R
+Added Member To Class: ClassName=TrickleCharging Member=Component R5 120R

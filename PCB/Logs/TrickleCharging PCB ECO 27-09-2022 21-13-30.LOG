@@ -1,0 +1,8 @@
+Added Component: Designator=CN?(MINI USB-B)
+Added Component: Designator=CN?(USB-B-S-RA)
+Added Component: Designator=P(KYCON_KUSBX-SMT2AP5S-B)
+Added Pin To Net: NetName=NetP_P1 Pin=P-P1
+Added Pin To Net: NetName=NetP_P1 Pin=P-P2
+Added Net: Name=NetP_P1
+Added Member To Class: ClassName=TrickleCharging Member=Component CN? MINI USB TYPE B
+Added Member To Class: ClassName=TrickleCharging Member=Component P KUSBX-SMT2AP5S-B

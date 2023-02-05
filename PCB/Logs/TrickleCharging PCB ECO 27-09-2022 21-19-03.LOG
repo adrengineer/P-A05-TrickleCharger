@@ -1,0 +1,12 @@
+Added Component: Designator=CN2(MINI USB-B)
+Added Component: Designator=CN3(USB-B-S-RA)
+Added Component: Designator=J2(GCT_USB4110-GF-A_REVB)
+Added Component: Designator=J3(GCT_USB4110-GF-A_REVB)
+Added Component: Designator=P2(OST_USB-A1HSW6)
+Added Component: Designator=P3(OST_USB-A1HSW6)
+Added Component: Designator=P(KYCON_KUSBX-SMT2AP5S-B)
+Added Member To Class: ClassName=TrickleCharging Member=Component CN3 USB Type B
+Added Member To Class: ClassName=TrickleCharging Member=Component J2 USB Type C
+Added Member To Class: ClassName=TrickleCharging Member=Component J3 USB Type C
+Added Member To Class: ClassName=TrickleCharging Member=Component P2 USB-A1HSW6
+Added Member To Class: ClassName=TrickleCharging Member=Component P3 USB-A1HSW6

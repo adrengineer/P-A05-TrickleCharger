@@ -1,0 +1,20 @@
+Added Component: Designator=R6(RES 0603 120R)
+Added Component: Designator=R7(RES 0603 120R)
+Added Pin To Net: NetName=GND Pin=J1-A1/B12
+Added Pin To Net: NetName=+5 Pin=J1-A4/B9
+Added Pin To Net: NetName=GND Pin=J1-B1/A12
+Added Pin To Net: NetName=+5 Pin=J1-B4/A9
+Added Pin To Net: NetName=GND Pin=J1-S1
+Added Pin To Net: NetName=GND Pin=J1-S2
+Added Pin To Net: NetName=GND Pin=J1-S3
+Added Pin To Net: NetName=GND Pin=J1-S4
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=GND Pin=R7-1
+Added Pin To Net: NetName=NetJ1_A5 Pin=J1-A5
+Added Pin To Net: NetName=NetJ1_A5 Pin=R7-2
+Added Net: Name=NetJ1_A5
+Added Pin To Net: NetName=NetJ1_B5 Pin=J1-B5
+Added Pin To Net: NetName=NetJ1_B5 Pin=R6-2
+Added Net: Name=NetJ1_B5
+Added Member To Class: ClassName=TrickleCharging Member=Component R6 120R
+Added Member To Class: ClassName=TrickleCharging Member=Component R7 120R

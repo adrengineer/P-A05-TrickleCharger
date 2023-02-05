@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=+5 Pin=D6-A
+Removed Pin From Net: NetName=GND Pin=R6-1
+Removed Member From Class: ClassName=TrickleCharging Member=D6
+Removed Member From Class: ClassName=TrickleCharging Member=R6
+Added Member To Class: ClassName=TrickleCharging Member=Component J1 USB Type C

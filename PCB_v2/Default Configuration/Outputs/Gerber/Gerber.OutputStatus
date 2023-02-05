@@ -1,0 +1,16 @@
+[OutputStatus]
+OutputFileNames0=C:\Users\Public\Documents\Altium\Projects\BatteryCharger\Default Configuration\Outputs\Gerber\TrickleCharging.GTL
+OutputFileNames1=C:\Users\Public\Documents\Altium\Projects\BatteryCharger\Default Configuration\Outputs\Gerber\TrickleCharging.GBL
+OutputFileNames2=C:\Users\Public\Documents\Altium\Projects\BatteryCharger\Default Configuration\Outputs\Gerber\TrickleCharging.GTO
+OutputFileNames3=C:\Users\Public\Documents\Altium\Projects\BatteryCharger\Default Configuration\Outputs\Gerber\TrickleCharging.GTP
+OutputFileNames4=C:\Users\Public\Documents\Altium\Projects\BatteryCharger\Default Configuration\Outputs\Gerber\TrickleCharging.GTS
+OutputFileNames5=C:\Users\Public\Documents\Altium\Projects\BatteryCharger\Default Configuration\Outputs\Gerber\TrickleCharging.GBS
+OutputFileNames6=C:\Users\Public\Documents\Altium\Projects\BatteryCharger\Default Configuration\Outputs\Gerber\TrickleCharging.GBP
+OutputFileNames7=C:\Users\Public\Documents\Altium\Projects\BatteryCharger\Default Configuration\Outputs\Gerber\TrickleCharging.GBO
+OutputFileNames8=C:\Users\Public\Documents\Altium\Projects\BatteryCharger\Default Configuration\Outputs\Gerber\TrickleCharging.GKO
+OutputFileNames9=C:\Users\Public\Documents\Altium\Projects\BatteryCharger\Default Configuration\Outputs\Gerber\TrickleCharging.Outline
+OutputFileNames10=C:\Users\Public\Documents\Altium\Projects\BatteryCharger\Default Configuration\Outputs\Gerber\TrickleCharging.RUL
+OutputFileNames11=C:\Users\Public\Documents\Altium\Projects\BatteryCharger\Default Configuration\Outputs\Gerber\TrickleCharging.EXTREP
+OutputFileNames12=C:\Users\Public\Documents\Altium\Projects\BatteryCharger\Default Configuration\Outputs\Gerber\TrickleCharging.REP
+Success=1
+HasRun=1

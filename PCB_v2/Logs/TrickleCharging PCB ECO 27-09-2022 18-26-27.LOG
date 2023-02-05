@@ -1,0 +1,26 @@
+Change Component Footprint: Designator=BT1 Old Footprint=BAT_BC2AAPC New Footprint=BAT_BC2AAPC - dompact
+Change Component Library : Designator=BT Old Library=[0801] BatteryAAholder_Dual.IntLib New Library=[0801] BatteryAAholder_Dual.SchLib
+Added Component: Designator=D7(SOT-23)
+Added Component: Designator=D9(LED_SML-D12FWT86)
+Added Component: Designator=D11(LED_SML-D12FWT86)
+Added Component: Designator=R7(RES 0603 120R)
+Added Component: Designator=R9(RES 0603 120R)
+Added Component: Designator=R11(RES 0603 470R)
+Added Pin To Net: NetName=GND Pin=BT-NEG
+Added Pin To Net: NetName=GND Pin=BT-NEG
+Added Pin To Net: NetName=+5 Pin=D1-1
+Added Pin To Net: NetName=+5 Pin=D3-A
+Added Pin To Net: NetName=GND Pin=R3-1
+Change Net Name : Old Net Name=NetD7_3 New Net Name=NetD1_3
+Change Net Name : Old Net Name=NetD9_C New Net Name=NetD2_C
+Change Net Name : Old Net Name=NetD11_C New Net Name=NetD3_C
+Added Pin To Net: NetName=NetD7_3 Pin=D1-3
+Added Pin To Net: NetName=NetD7_3 Pin=D2-A
+Added Pin To Net: NetName=NetD7_3 Pin=R1-2
+Added Net: Name=NetD7_3
+Added Pin To Net: NetName=NetD9_C Pin=D2-C
+Added Pin To Net: NetName=NetD9_C Pin=R2-2
+Added Net: Name=NetD9_C
+Added Pin To Net: NetName=NetD11_C Pin=D3-C
+Added Pin To Net: NetName=NetD11_C Pin=R3-2
+Added Net: Name=NetD11_C
